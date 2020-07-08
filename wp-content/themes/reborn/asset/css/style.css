@@ -1,0 +1,1641 @@
+/*!
+Theme Name: Reborn
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: reborn
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------RESET------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
+  *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
+  *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  *overflow: visible; /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+  *height: 13px; /* 3 */
+  *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------GENERAL------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "hansiefregular";
+  src: url("/wp-content/themes/reborn/asset/fonts/hansief-webfont.woff2") format("woff2"),
+    url("/wp-content/themes/reborn/asset/fonts/hansief-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "westmeathregular";
+  src: url("/wp-content/themes/reborn/asset/fonts/westmeath-webfont.woff2") format("woff2"),
+    url("/wp-content/themes/reborn/asset/fonts/westmeath-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "thabitregular";
+  src: url("/wp-content/themes/reborn/asset/fonts/u062bu0627u0628u062a_500-webfont.woff2")
+      format("woff2"),
+    url("/wp-content/themes/reborn/asset/fonts/u062bu0627u0628u062a_500-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "thabit-bold-obliqueBdOb";
+  src: url("/wp-content/themes/reborn/asset/fonts/u062bu0627u0628u062a_700-webfont.woff2")
+      format("woff2"),
+    url("/wp-content/themes/reborn/asset/fonts/u062bu0627u0628u062a_700-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: auto;
+}
+
+html {
+  margin: 0 !important;
+}
+
+body {
+  font-family: thabitregular, sans-serif;
+  background-color: #4f8067;
+  background-image: url(/wp-content/themes/reborn/asset/img/texture.png);
+  background-repeat: repeat;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-family: thabitregular, sans-serif;
+  font-size: 1.2vw;
+  letter-spacing: 0.1em;
+  color: #faf9c4;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: westmeathregular, sans-serif;
+  text-align: center;
+  color: #ffda89;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+  font-family: hansiefregular, sans-serif;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #faf9c4;
+  letter-spacing: 4px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------HEADER------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+.bande_decoration {
+  position: absolute;
+  width: 100vw;
+  z-index: -10;
+  top: 0;
+  right: 0;
+}
+
+.bande_decoration img {
+  width: 100vw;
+}
+
+.navigation {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  padding-top: 150px;
+}
+
+.navigation li {
+  padding: 0 1em;
+}
+
+.navigation a {
+  font-size: 1.4em;
+}
+
+.navigation .active a:hover {
+  border-bottom: 2px solid #faf9c4;
+  padding-bottom: 3px;
+}
+
+header .logo-header {
+  width: 20vw;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation li {
+    padding: 0 0.5em;
+  }
+
+  .navigation a {
+    font-size: 1em;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------Menu Burger------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#hamburger,
+#hamburger-button {
+  display: inline;
+}
+#hamburger-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0;
+  vertical-align: top;
+  line-height: 70px;
+  float: left;
+  margin-left: 30px;
+  color: #faf9c4;
+}
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 80%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #4f8067;
+  transform: translateX(-150%);
+  transition: transform 0.2s ease-out;
+}
+
+#hamburger-sidebar-body {
+  margin-top: 10px;
+}
+
+#hamburger-sidebar li {
+  display: block;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+
+#hamburger-sidebar-body > div > nav > ul > li.btn-menu.logo_burger {
+  order: -1;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 720px) {
+  .navigation,
+  .nav,
+  .wrap,
+  #hamburger-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hamburger {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #hamburger-button {
+    order: -1;
+    margin-bottom: 120px;
+  }
+
+  header .logo-header {
+    width: 60vw;
+    height: auto;
+  }
+
+  #element_vide_droite {
+    margin-right: 66px;
+    order: 2;
+  }
+
+  header .active {
+    display: none;
+  }
+
+  #hamburger-button,
+  #hamburger-sidebar,
+  .hamburger-activated #hamburger-overlay {
+    display: block;
+  }
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------HOMEPAGE------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SECTION #homepage_sloganReborn--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#homepage_sloganReborn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -7%;
+}
+
+#homepage_sloganReborn .texte_homepage_sloganReborn {
+  font-size: 3vw;
+  margin: 13% 0 0 15%;
+  line-height: 157.7%;
+  white-space: nowrap;
+}
+
+#homepage_sloganReborn img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 720px) {
+  #homepage_sloganReborn {
+    flex-direction: column;
+  }
+
+  #homepage_sloganReborn .texte_homepage_sloganReborn {
+    font-size: 8vw;
+    text-align: center;
+    margin: 15% 0 10% 0;
+  }
+
+  #homepage_sloganReborn img {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SECTION #homepage_aventureReborn--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#section_home_aventure {
+  display: grid;
+  grid-template-columns: 50%;
+  margin-top: 100px;
+}
+
+.div_home_titre_aventure {
+  align-self: center;
+}
+
+.column {
+  grid-column: 2;
+}
+
+.home_img_aventure {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  align-self: center;
+  text-align: center;
+}
+
+.home_titre_aventure {
+  font-size: 3vw;
+  text-align: center;
+}
+
+.high_bar,
+.low_bar {
+  border: 1px solid #ffda89;
+  height: 1px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 8px 0;
+}
+
+.high_bar_aventure,
+.low_bar_aventure {
+  width: 53%;
+  margin-left: 23%;
+}
+
+.home_texte_aventure {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.home_img_aventure img {
+  width: 70%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_texte_aventure {
+    font-size: 1.5vw;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #section_home_aventure {
+    grid-template-columns: 100%;
+  }
+  .home_titre_aventure {
+    margin: 0 auto;
+    font-size: 8vw;
+  }
+  .home_texte_aventure {
+    width: 90%;
+    font-size: 4.5vw;
+    margin: 0 auto;
+  }
+  .low_bar_aventure,
+  .high_bar_aventure {
+    width: 73%;
+    margin: 6px auto;
+  }
+  .column {
+    grid-column: 1;
+    text-align: center;
+  }
+  .div_home_texte_aventure {
+    grid-row: 3;
+  }
+  .home_img_aventure {
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    margin: 25px auto;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SECTION #homepage_vedetteReborn--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#section_home_vedette {
+  margin-top: 100px;
+}
+
+.home_titre_vedette {
+  text-align: center;
+  margin-left: 0.5%;
+  font-size: 3vw;
+}
+
+.high_bar_vedette,
+.low_bar_vedette {
+  width: 19%;
+  margin: 6px auto;
+}
+
+.home_produits_vedette {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home_produits_vedette h3 {
+  font-family: westmeathregular, sans-serif;
+  letter-spacing: 0.1em;
+  color: #ffda89;
+  font-size: 2.5vw;
+  margin-top: 15%;
+  text-transform: uppercase;
+}
+
+.home_lovidol_vedette,
+.home_tronconic_vedette {
+  text-align: center;
+}
+
+.cercle_vert_vedette {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  background-color: #599576;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.img_lovidol_vedette {
+  height: auto;
+  width: 50%;
+  align-self: center;
+}
+
+.img_tronconic_vedette {
+  height: auto;
+  width: 65%;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.div_deco_bouton_vedette {
+  margin: 50px auto;
+  width: 190px;
+  height: 50px;
+  background-color: #4f8067;
+  border: 5px solid #599576;
+  justify-content: center;
+}
+
+.bouton_infos_produits_vedette_1 {
+  text-transform: uppercase;
+}
+
+.bouton_infos_produits_vedette {
+  margin: 5px auto;
+  align-self: center;
+}
+
+.bouton_infos_produits {
+  width: 180px;
+  height: 40px;
+  background-color: #4f8067;
+  border: 3px solid #599576;
+  font-family: hansiefregular, sans-serif;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  font-size: 1em;
+  outline: 0;
+  cursor: pointer;
+  color: #faf9c4;
+}
+
+.bouton_infos_produits:hover {
+  border-color: #ffda89;
+}
+
+@media screen and (max-width: 1024px) {
+  .cercle_vert_vedette {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .home_titre_vedette {
+    font-size: 8vw;
+  }
+  .home_produits_vedette {
+    flex-direction: column;
+    align-items: center;
+  }
+  .low_bar_vedette,
+  .high_bar_vedette {
+    width: 53%;
+  }
+  .home_lovidol_vedette {
+    margin-top: 70px;
+  }
+  .home_tronconic_vedette {
+    margin-top: 70px;
+  }
+  .home_produits_vedette h3 {
+    font-size: 6.5vw;
+  }
+  .margin-bottom_button_vedette_responsive {
+    margin-bottom: 70px;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SECTION #homepage_tresorsReborn--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#section_home_tresors {
+  display: grid;
+  grid-template-columns: 50%;
+  margin-top: 30px;
+}
+
+.div_home_titre_tresors {
+  align-self: center;
+}
+
+.home_titre_tresors {
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+.high_bar_tresors,
+.low_bar_tresors {
+  width: 41%;
+  margin: 6px auto;
+}
+
+.home_texte_tresors {
+  width: 70%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+.home_img_tresors {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  align-self: center;
+  text-align: center;
+}
+
+.home_img_tresors img {
+  width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_texte_tresors {
+    font-size: 1.5vw;
+  }
+  .home_img_tresors img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #section_home_tresors {
+    grid-template-columns: 100%;
+  }
+  .home_titre_tresors {
+    margin: 0 auto;
+    font-size: 8vw;
+  }
+  .home_texte_tresors {
+    width: 90%;
+    font-size: 4.5vw;
+    margin: 0 auto;
+  }
+  .low_bar_tresors,
+  .high_bar_tresors {
+    width: 52%;
+    margin: 6px auto;
+  }
+  .div_home_texte_tresors,
+  .div_home_titre_tresors {
+    grid-column: 1;
+    text-align: center;
+  }
+  .div_home_texte_tresors {
+    grid-row: 3;
+  }
+  .home_img_tresors {
+    grid-row: 2;
+    grid-column: 1;
+    width: 70%;
+    margin: 25px auto;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SECTION #homepage_histoireReborn--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#section_home_histoire {
+  display: grid;
+  grid-template-columns: 50%;
+  margin-top: 100px;
+}
+
+.div_home_texte_histoire,
+.div_home_titre_histoire {
+  grid-column: 1;
+}
+
+.high_bar_histoire,
+.low_bar_histoire {
+  width: 43%;
+  margin: 6px auto;
+}
+
+.home_titre_histoire {
+  font-size: 3vw;
+  text-align: center;
+}
+
+.home_texte_histoire {
+  width: 70%;
+  text-align: center;
+  margin: 40px auto 0 auto;
+}
+
+.home_img_histoire {
+  align-self: flex-end;
+  grid-column: 2;
+  grid-row: 1/3;
+  text-align: center;
+}
+
+.home_img_histoire img {
+  width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .home_texte_histoire {
+    font-size: 1.5vw;
+  }
+  .home_img_histoire img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #section_home_histoire {
+    grid-template-columns: 100%;
+  }
+  .home_img_histoire {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 25px auto;
+    width: 70%;
+  }
+
+  .home_titre_histoire {
+    margin: 0 auto;
+    font-size: 8vw;
+  }
+  .home_texte_histoire {
+    width: 90%;
+    font-size: 4.5vw;
+    margin: 0 auto;
+  }
+  .low_bar_histoire,
+  .high_bar_histoire {
+    width: 60%;
+    margin: 6px auto;
+  }
+  .div_home_texte_histoire,
+  .div_home_titre_histoire {
+    grid-column: 1;
+    text-align: center;
+  }
+  .div_home_texte_histoire {
+    grid-row: 3;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------PAGE NOS PRODUITS------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+.wrap_produit {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.produits {
+  display: flex;
+  margin-top: 100px;
+}
+
+.titre_description_produit {
+  margin-right: 10%;
+}
+
+.titre_du_produit{
+  font-family: westmeathregular, sans-serif;
+  color: #ffda89;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.1em;
+  font-size: 2.5vw;
+  margin: 50px 0;
+}
+
+.description_du_produit {
+  font-size: 1.3vw;
+  text-align: center;
+}
+
+.cerle_produit {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  width: 350px;
+  background-color: #599576;
+  border-radius: 50%;
+}
+.image_produit {
+  align-self: flex-end;
+}
+.image_du_produit {
+  height: auto;
+  width: 50%;
+  align-self: center;
+}
+
+.lien_single_page, .lien_achat {
+  text-transform: none;
+}
+
+.group_boutons {
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+}
+
+.div_deco_bouton_produits {
+  display: flex;
+  width: 190px;
+  height: 50px;
+  background-color: #4f8067;
+  border: 5px solid #599576;
+}
+
+.bouton_nos_produits {
+  align-self: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .produits {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .titre_description_produit {
+    margin-right: 0;
+  }
+  .titre_du_produit {
+    font-size: 5vw;
+    margin-top: 50px;
+  }
+  .description_du_produit {
+    font-size: 2.5vw;
+  }
+  .image_produit {
+    margin: 50px auto 0 auto;
+  }
+  .cerle_produit {
+    height: 250px;
+    width: 250px;
+  }
+  .div_deco_bouton_produits {
+    margin: 25px auto 0 auto;
+  }
+  .group_boutons {
+    margin: 0;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .wrap_produit {
+    width: 90%;
+  }
+  .titre_du_produit {
+    font-size: 8vw;
+  }
+
+  .produits {
+    margin-top: 50px;
+  }
+
+  .description_du_produit {
+    font-size: 4.5vw;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------PAGE NOS TRESORS--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+.image_tresor_1 {
+    align-self: center;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------SINGLE PRODUIT------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+.single_produits {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.single_produit_titre_prix_boutons {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.single_bloc_titre_marque {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.single_bloc_titre_marque h2 {
+  font-size: 2.5vw;
+}
+
+.single_prix {
+  align-self: center;
+}
+.single_prix p {
+  font-family: hansief, arial;
+}
+
+.single_group_boutons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.accordion {
+  font-family: hansiefregular, sans-serif;
+  text-transform: uppercase;
+  background-color: #599576;
+  color: #faf9c4;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top: 25px;
+  border: none;
+}
+
+.single_active, .accordion:hover,
+button:focus {
+  background-color: #4f8067;
+  background: #4f8067;
+  border: none;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #faf9c4;
+  float: right;
+  margin-left: 5px;
+}
+
+.single_active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  color: #faf9c4;
+}
+
+
+@media screen and (max-width: 720px) {
+
+  .single_produits {
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .single_produits h2 {
+    font-size: 8vw;
+  }
+
+  .single_produits p {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+
+  .single_produit_titre_prix_boutons {
+    width: 90%;
+    margin: 0 auto;
+}
+
+  .single_group_boutons {
+    flex-direction: column;
+  }
+
+  
+}
+
+
+
+/*--------------------------------------------------------Contact------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+.nf-field-element {
+  text-align: center;
+}
+
+.nf-form-content {
+  width: 90% !important;
+}
+
+.nf-form-content input[type="button"] {
+  background-color: #4f8067 !important;
+  border: 2px solid #599576 !important;
+  color: #faffd1 !important;
+  font-size: hansiefregular, sans-serif !important;
+}
+
+.nf-form-content input[type="button"]:hover {
+  border-color: #ffda89 !important;
+}
+
+.nf-form-content label {
+  color: #faffd1 !important;
+}
+
+.nf-form-content input,
+textarea {
+  background-color: #4f8067 !important;
+  border: 2px solid #599576 !important;
+  color: #faffd1 !important;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------PAGE BLOG--------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+.wrap3 {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.extrait_article {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #599576;
+  margin: 100px 0;
+  padding: 20px 0;
+}
+
+.blog_bloc_textes {
+  width: 60%;
+}
+
+.blog_titre_article {
+  margin-bottom: 20px;
+  font-size: 2.5vw;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog_titre_article_single {
+  margin-bottom: 50px;
+  font-size: 2.5vw;
+}
+
+.blog_img_article {
+  margin-top: 50px;
+}
+
+.blog_bloc_textes_single {
+  margin-bottom: 100px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------CGU & mentions légales------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+.titre_principal_cgu_ml {
+  font-size: 3vw;
+  text-align: left;
+}
+.wrap_cgu_ml {
+  width: 1290px;
+  margin: 50px auto;
+  max-width: 90%;
+  color: #faffd1;
+}
+.titre_secondaire_cgu_ml {
+  font-size: 2.5vw;
+}
+.liens_reborn_cgu_ml {
+  font-size: 1em;
+  text-transform: none;
+  font-family: thabitregular, sans-serif;
+}
+.mentions_legales {
+  margin: 20px 0;
+}
+@media screen and (max-width: 720px) {
+  .titre_principal_cgu_ml {
+    font-size: 5vw;
+    text-align: center;
+    margin: 25px 0;
+  }
+  .wrap_cgu_ml p {
+    text-align: center;
+    font-size: 3vw;
+  }
+  .titre_secondaire_cgu_ml {
+    font-size: 4vw;
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+@media screen and (min-width: 720px) {
+  .titre_principal_cgu_ml {
+    margin: 15px 25px;
+  }
+  .titre_secondaire_cgu_ml {
+    margin: 15px 0 15px 50px;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------FOOTER------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+  font-family: hansiefregular, sans-serif;
+  margin-top: 100px;
+}
+.nav_footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #599576;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.titre_footer {
+  font-size: 25px;
+  letter-spacing: 0.1em;
+  color: #ffda89;
+  margin: 25px 0;
+}
+.titre_reseaux {
+  font-family: hansiefregular, sans-serif;
+  margin-top: 20px;
+}
+.nav_footer ul li a {
+  color: #faffd1;
+  text-decoration: none;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+.copyright {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  color: #faffd1;
+}
+.reseaux_footer {
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+}
+.reseaux_footer img {
+  width: 10%;
+}
+.reseauI,
+.reseauL,
+.reseauT {
+  margin: 10px 0;
+}
+.reseauF {
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .nav_footer {
+    height: 400px;
+  }
+  .reborn_footer,
+  .service_client_footer,
+  .mentions_legales_footer {
+    width: 50%;
+    text-align: center;
+  }
+  .reseaux_footer {
+    width: 50%;
+    text-align: center;
+  }
+  .reseaux_footer img {
+    width: 5%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .nav_footer {
+    height: 690px;
+  }
+  .reborn_footer,
+  .service_client_footer,
+  .mentions_legales_footer {
+    width: 100%;
+    text-align: center;
+  }
+  .reseaux_footer {
+    width: 100%;
+  }
+  .reseaux_footer img {
+    width: 4%;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------404------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------- */
+
+#main {
+  display: table;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+}
+
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1,
+.fof p {
+  color: #faffd1;
+  font-size: 50px;
+  padding-right: 12px;
+  animation: type 0.5s alternate infinite;
+}
+
+@keyframes type {
+  from {
+    box-shadow: inset -3px 0px 0px #888;
+  }
+  to {
+    box-shadow: inset -3px 0px 0px transparent;
+  }
+}

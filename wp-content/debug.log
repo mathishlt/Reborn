@@ -1,0 +1,4 @@
+[17-Jun-2020 12:05:22 UTC] PHP Warning:  mysqli_real_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Reborn/wp-includes/wp-db.php on line 1626
+[17-Jun-2020 12:05:22 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Reborn/wp-includes/wp-db.php on line 1626
+[08-Jul-2020 12:45:20 UTC] PHP Warning:  mysqli_real_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Reborn2020/wp-includes/wp-db.php on line 1626
+[08-Jul-2020 12:45:21 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in /Applications/MAMP/htdocs/Reborn2020/wp-includes/wp-db.php on line 1626
